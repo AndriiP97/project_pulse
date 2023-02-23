@@ -134,9 +134,10 @@
     }
 
     .feed-form {
+        margin: 0 auto;
         margin-top: 36px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column;  
         width: 300px;
     }
 }
