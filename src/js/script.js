@@ -65,6 +65,55 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+/*     $('#consultation-form').validate();
+    $('#consultation form').validate({
+        rules: {
+            name: "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Пожалуйста, веддите свое имя",
+            phone: "Пожалуйста, введите своЙ номер телефона",
+            email: {
+                required: "Пожалуйста, веддите свою почту",
+                email: "Не правильно введен адрес почты"
+            }
+          }
+    }); */
+
+ /*    Функція знизу для повторення кода для форм */
+/* 
+    $('#order form').validate(); */
+   
+    function valideForms(form){
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста, веддите свое имя",
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, веддите свою почту",
+                    email: "Не правильно введен адрес почты"
+                }
+              }
+        });
+    };
+
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
 });
 
    
