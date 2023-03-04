@@ -30,4 +30,13 @@
             text-decoration: underline;
         }
     }
+    &__icon {
+        &_animated {
+            animation: heartbeat 1.5s ease infinite; /* можна записати як із бекграундом фоном */
+/*             animation-name: heartbeat; звідки йдуть правила анімації
+            animation-duration: 1.5s; 
+            animation-timing-function: ease;
+            animation-iteration-count: infinite; */ 
+        }
+    }
 }
