@@ -37,7 +37,7 @@ $(document).ready(function(){
         })
     }); */
 
-    function toggleClass(item) { /* оптимизіваний код для детально і назад */
+    function toggleSlide(item) { /* оптимизіваний код для детально і назад */
         $(item).each(function(i) {
             $(this).on('click', function(e) {
                 e.preventDefault();
@@ -47,8 +47,8 @@ $(document).ready(function(){
         })
     };
 
-    toggleClass('.catalog-item__link');
-    toggleClass('.catalog-item__back');
+    toggleSlide('.catalog-item__link');
+    toggleSlide('.catalog-item__back');
 
     /* Modal */
 
@@ -155,6 +155,9 @@ $(document).ready(function(){
         return false;
     });
 
+    
+   /*  Для того щоб анімація програлась як користувач долистає до відгука наприклад */
+    new WOW().init();
     
 });
 
